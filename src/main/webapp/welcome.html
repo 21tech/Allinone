@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京邮电大学本科生成绩自助打印系统</title>
+</head>
+<body></body>
+<script src="js/util.js"></script>
+<script src="js/json2.js"></script>
+<script>
+	window.onload = function() {
+		init();
+	};
+	var init = function() {
+		try {
+			var sysId="3e43c0ad4a2a83ba4f24c2b4083c2cf7";
+			post("index", {
+					sysId : sysId
+				});
+			/*  window.cefQuery({
+			    request: 'Request:init' ,
+			  	onSuccess: function(response) {
+			    	post("index", {
+						sysId : response
+					});
+			    },
+			    onFailure: function(error_code, error_message) {}
+			  });  
+			 */
+			 var data = {"nMoney":"1","Tn":"0","date":"2016-10-25 15:30:00"};
+			 window.cefQuery({
+				    request: 'Request:DCM='+JSON.stringify(data) ,
+				  	onSuccess: function(response) {
+				    	/* post("index", {
+							sysId : response
+						}); */
+				    },
+				    onFailure: function(error_code, error_message) {}
+				  });  
+
+		} catch (err) {
+			alert(err);
+		}
+	};
+</script>
+
+
+
+</html>

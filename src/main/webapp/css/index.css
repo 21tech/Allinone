@@ -1,0 +1,234 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: auto;
+	width: 1280px;
+	height: 1024px;
+	background-image: url(../images/index_bg.png);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	float: left;
+}
+
+ul li {
+	list-style: none;
+	margin: 0px;
+}
+
+img {
+	display: block;
+}
+
+.button {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s,
+		border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width
+		0.3s, border-color 0.3s;
+}
+
+.button a {
+	position: absolute;
+	cursor: pointer;
+}
+
+.button a[action-type=kxjs] {
+	left: 845px;
+	top: 450px;
+}
+
+.button a[action-type=dycj] {
+	left: 595px;
+	top: 247px;
+}
+
+.button a[action-type=gzzd] {
+	left: 330px;
+	top: 450px;
+}
+
+.button a[action-type=xl] {
+	left: 445px;
+	top: 735px;
+}
+
+.button a[action-type=gg] {
+	left: 767px;
+	top: 705px;
+}
+/* 半透明的遮罩层 */
+.b-panel {
+	width: 1280px;
+	height: 1024px;
+	text-align: center;
+	display: none;
+}
+
+.full-screen-mask {
+	position: absolute;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0.5;
+	z-index: 3;
+}
+
+.m-panel {
+	position: absolute;
+	background-color: #fff;
+	width: 1000px;
+	height: 500px;
+	top: 50%;
+	left: 25%;
+	margin: -200px 0 0 -200px;
+	z-index: 5;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	overflow:hidden;
+}
+
+.right-top-close-button {
+	width: 100%;
+	height: 64px;
+	line-height: 64px;
+	background-color: #F2F2F2;
+	border: 1px solid #F2F2F2;
+	border-bottom: 1px solid #cdcdcd;
+	box-shadow: 0 -1 20px rgba(0, 0, 0, 1);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	cursor: pointer;
+}
+
+.right-top-close-button div {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.right-top-close-button ul li:nth-child(3) {
+	color: red;
+}
+
+.right-top-close-button ul li:nth-child(4) {
+	color: #919191;
+	margin-top: -10px;
+	margin-left: 600px;
+}
+
+.right-top-close-button  img {
+	padding-top: 10px;
+	display: block;
+	margin: 0 auto;
+	width: 40px;
+	height: 100%
+}
+
+.i-panel {
+	overflow: hidden;
+}
+
+.i-panel:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0
+}
+
+.i-panel {
+	zoom: 1;
+	padding-left: 40px;
+}
+
+.text-span {
+	width: 30%;
+	margin-left: 110px;
+	float: left;
+}
+
+/*虚拟键盘*/
+#keybord_area {
+	width: 1280px;
+	overflow: hidden;
+}
+
+#keybord_panel {
+	list-style: none;
+}
+
+#keybord_panel li {
+	float: left;
+	margin: 0 5px 5px 0;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	color: #555;
+	font-size: 20pt;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.capslock, .tab, .left-shift {
+	clear: left;
+}
+
+#keybord_panel .tab, #keybord_panel .delete {
+	width: 50px;
+}
+
+#keybord_panel .capslock {
+	font-size: 12pt;
+	width: 80px;
+}
+
+#keybord_panel .return {
+	width: 97px;
+}
+
+#keybord_panel .left-shift {
+	width: 90px;
+}
+
+#keybord_panel .right-shift {
+	width: 110px;
+}
+
+.lastitem {
+	margin-right: 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.on {
+	display: none;
+}
+
+#keybord_panel li:hover {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px
+		rgba(102, 175, 233, .6);
+	position: relative;
+	top: 1px;
+	left: 1px;
+	cursor: pointer;
+	position: relative;
+}
+/*登录、刷卡*/
+button:disabled {
+	background-color: #cdcdcd;
+}
